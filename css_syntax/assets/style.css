@@ -1,0 +1,30 @@
+body {
+ font-family: Arial, sans-sarif;
+ background: url("http://www.dokimos.org/ajff/idx2.gif")
+ /* background-color: #33ddff */
+}
+h1 {
+  font-size: 38px
+}
+h2 {
+  font-size: 32px
+}
+
+ul.ingredients-list {
+  list-style: square inside
+}
+ol.directions {
+  list-style: katakana inside
+}
+
+header > img {
+  width: 100px
+}
+
+ul li a {
+  text-decoration: none;
+  color: mediumseagreen
+}
+
+
+
