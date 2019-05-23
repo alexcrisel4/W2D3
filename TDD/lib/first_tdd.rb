@@ -24,4 +24,17 @@ def my_transpose(array)
     end
   end
     new_array
-  end
+end
+
+def stock_picker(stock_prices)
+  profit = Hash.new(0)
+  stock_prices.each_with_index do |price_1, buy|
+    stock_prices.each_with_index do |price_2, sell|
+        if sell >= buy      
+      profit[[buy,sell]] = (price_2 - price_1) 
+        end 
+      end
+    end
+    profit.max_by { |k,v| v}[0]
+end
+

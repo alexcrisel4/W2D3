@@ -29,11 +29,16 @@ end
 
   describe "#stock_picker" do
     it "buys before it sells" do
-      expect(stock_picker([1,2,3,4,5,6,7])).to eq([1,2])
+      expect(stock_picker([1,2,3,4,5,6,7])).to_not eq([2,1])
     end
 
     it "allows you to buy and sell on the same day" do
       expect(stock_picker([7,6,5,4,3,2,1])).to eq([0,0])
+    end
+
+    it "outputs the most profitable pair of days" do
+      expect(stock_picker([1,2,3,4,5,6,7])).to eq([0,6])
+      expect(stock_picker([7, 2, 5, 4, 3 ,2 , 1])). to eq([1,2])
     end
 
   end
